@@ -87,7 +87,7 @@ function updateNumberPlayed(round) {
 }
 
 function startNewRound() {
-    let newRound = roundGenerator.createRound();
+    let newRound = roundGenerator.createRound(roundsList.length + 1);
     roundsList.push(newRound);
     io.sockets.emit('newRound', newRound);
 }
