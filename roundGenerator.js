@@ -1,6 +1,5 @@
 module.exports = {
-    createRound: function() {
-        let roundNum = roundsList.length+1;
+    createRound: function(roundNumber) {
         let firstDigit = Math.floor(Math.random() * 10);
         let secondDigit = Math.floor(Math.random() * 10);
         let operations=['+', '-', '*', '/'];
@@ -8,7 +7,7 @@ module.exports = {
         let operation = operations[operationIndex];
 
         let round = {
-            round:roundNum,
+            round:roundNumber,
             x: firstDigit,
             y: secondDigit,
             operation: operation,
